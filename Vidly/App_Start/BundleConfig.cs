@@ -18,13 +18,14 @@ namespace Vidly
             // ready for production, use the build tool at https://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
-
+           
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
 
+            //CGH changed bootstrap.css to bootstrap-lumen.css
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
+                      "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css"));
         }
     }
