@@ -12,16 +12,17 @@ namespace Vidly
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            //CGH Attribute Routing
+            routes.MapMvcAttributeRoutes();
             //CGH Custom Route
-            routes.MapRoute(
+           /* routes.MapRoute(
                 "MoviesByReleaseDate",
                 "movies/released/{year}/{month}",
                 //defaults
                 new { controller = "Movies", action = "ByReleaseDate"},
                 //constraints
                 new {year = @"2015|2016", month = @"\d[2]"}
-                );
+                );*/
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

@@ -10,6 +10,8 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
+        
+        
         // GET: Movies/Random
         public ActionResult Random()
         {
@@ -39,10 +41,14 @@ namespace Vidly.Controllers
             return Content(String.Format("pageIndex = {0}&sortBy={1}", pageIndex, sortBy));
         }
 
+        //CGH Attribute Routing
+        [Route("movies/released/{year:regex(\\d{4}):range(1900,3000)}/{month:regex(\\d{2}):range(1,12)}")]
         public ActionResult ByReleaseDate(int year, int month)
         {
             return Content(year + "/" + month);
 
         }
+
+
     }
 }
